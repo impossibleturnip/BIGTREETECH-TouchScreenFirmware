@@ -14,7 +14,7 @@
  * ST7920_SPI // Marlin Mode
  * SERIAL_TSC // Touch Mode
  */
-#define DEFAULT_LCD_MODE SERIAL_TSC
+#define DEFAULT_LCD_MODE ST7920_SPI
 
 /**
  * Default Startup Knob LED Color (TFT35 E3)
@@ -25,7 +25,7 @@
  *
  * Default value is: 1 for LED_OFF
 */
-#define STARTUP_KNOB_LED_COLOR 0         // LED_OFF
+#define STARTUP_KNOB_LED_COLOR 6         // LED_BLUE
 #define KEEP_KNOB_LED_COLOR_MARLIN_MODE  // Keeps the LED state in Marlin Mode
 
 /**
@@ -44,9 +44,9 @@
  *              6: LCD_DIM_300_SECONDS,  7: LCD_DIM_CUSTOM_SECONDS
  *
  */
-#define DEFAULT_LCD_BRIGHTNESS      10  // 10: LCD_100_PERCENT - Brightness value from list
+#define DEFAULT_LCD_BRIGHTNESS      9  // 9: LCD_90_PERCENT - Brightness value from list
 #define DEFAULT_LCD_IDLE_BRIGHTNESS 2   // 2: LCD_10_PERCENT - Brightness value from list
-#define DEFAULT_LCD_IDLE_TIMER      0   // 0: LCD_DIM_OFF
+#define DEFAULT_LCD_IDLE_TIMER      6   // 6: LCD_DIM_300_SECONDS
 #define LCD_DIM_CUSTOM_SECONDS      600 // Custom value in seconds. Will be used if LCD_DIM_CUSTOM_SECONDS is set as idle timer.
 
 //===========================================================================
@@ -62,25 +62,25 @@
  *          6: MAGENTA,    7: YELLOW,      8: ORANGE,  9: PURPLE,   10: LIME,  11: BROWN,
  *         12: DARKBLUE,  13: DARKGREEN,  14: GRAY,   15: DARKGRAY
  */
-#define ST7920_BKCOLOR 1
-#define ST7920_FNCOLOR 0
+#define ST7920_BKCOLOR BLACK
+#define ST7920_FNCOLOR YELLOW
 
 /**
  *  Text displayed at the top of the TFT in Marlin Mode.
  */
-#define ST7920_BANNER_TEXT "LCD12864 Simulator"
+//#define ST7920_BANNER_TEXT "LCD12864 Simulator"
 
 /**
  *  show banner text at the top of the TFT in Marlin Mode.
  */
-#define ST7920_SHOW_BANNER true //to enabled: true | to disabled: false
+#define ST7920_SHOW_BANNER false //to enabled: true | to disabled: false
 /**
  * Run Marlin Mode in Fullscreen
  *
  *  Options:  0: Disabled. RECOMMENDED FOR TFT24
  *            1: Enabled Marlin Fullscreen mode.
  */
-#define DEFAULT_ST7920_FULLSCREEN_MODE 0 // 0: Disabled. RECOMMENDED FOR TFT24
+#define DEFAULT_ST7920_FULLSCREEN_MODE 1 // 1: Enabled. RECOMMENDED FOR TFT24
 
 /**
  * Keep Serial always On (ONLY SUPPORTED ON TFT24 V1.1, TFT35 V3.0, AND TFT28 V3.0)
@@ -91,7 +91,7 @@
  *
  *  Options:  0: Disabled    1: Enabled
  */
-#define SERIAL_ALWAYS_ON 0  // Default: 0 (Disabled)
+#define SERIAL_ALWAYS_ON 1  // Default: 1 (Enabled)
 
 //===========================================================================
 //========================== Touch Mode Settings ============================
@@ -106,7 +106,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200
+#define BAUDRATE 250000
 
 /**
  * Default Touch Mode Language
@@ -144,7 +144,7 @@
 #define BACKGROUND_COLOR           1  // Background color // 0x0A29
 #define FONT_COLOR                 0  // Font foreground color
 #define REMINDER_FONT_COLOR        2  // Reminder font color, such as: "No print attached", "Busy processing", etc.
-#define VOLUME_REMINDER_FONT_COLOR 5  // Volume reminder font color, such as: "Card inserted", "Card removed"
+#define VOLUME_REMINDER_FONT_COLOR 6  // Volume reminder font color, such as: "Card inserted", "Card removed"
 #define STATUS_XYZ_BG_COLOR        15 // Backgroud color for X Y Z positon display in Status Screen.
 #define LISTVIEW_BORDER_COLOR      15 // Border color in List view
 #define LISTVIEW_ICON_COLOR        15 // icon color in List view
